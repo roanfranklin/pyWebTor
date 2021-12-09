@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  pywebtor:
+    container_name: pywebtor
+    build: .
+    volumes:
+      - ./project:/code
+#      - ./data:/var/lib/tor
+#      - ./config/torrc:/etc/tor/torrc
+    ports:
+      - "9050:9050"
+      - "9051:9051"
